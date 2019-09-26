@@ -31,15 +31,60 @@
     </style>
   </head>
   <body>
-    <div id="message">
+    <h1>test</h1>
+
+
+    <form name="ptable" action="#">
+    東京
+    <select name="tokyo27">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    -
+    <select name="yokohama27">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+
+    <input type="button" value="calc" onclick="func()">
+
+    <input type="text" name="T3">
+    </form>
+
+
+
+    <!-- <div id="message">
       <h2>Welcome</h2>
       <h1>Firebase Hosting Setup Complete</h1>
       <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
+    -->
 
     <script>
+      function func() {
+        var tokyo = 52;
+        var kashima = 51;
+        var yokohama = 48;
+        var kawasaki = 44;
+        var hiroshima = 43;
+        var cosaka = 43;
+        var tokyogoal = parseInt(document.ptable.tokyo27.value);
+        var yokohamagoal = parseInt(document.ptable.yokohama27.value);
+
+        document.ptable.T3.value = tokyogoal + yokohamagoal;
+        }
+
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
@@ -60,6 +105,7 @@
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
         }
       });
+
     </script>
   </body>
 </html>
